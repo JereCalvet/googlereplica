@@ -1,0 +1,334 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* reset */
+
+:root {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    --defaultfontcolor: rgb(60, 64, 67);
+    --footerfontcolor: rgba(0, 0, 0, 0.54);
+    --footerbackgroundcolor: rgb(242, 242, 242);
+    --formbuttonscolor: #f8f9fa;
+    --footerboder: #dadce0;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    min-width: 300px;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10vh;
+}
+
+.navbar-ul {
+    display: flex;
+}
+
+.nav-item {
+    height: 100%;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+#circle:hover {
+    background-color: var(--footerbackgroundcolor);
+}
+
+#navbar a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    color: rgb(75, 73, 73);
+}
+
+#circle {
+    border-radius: 100%;
+}
+
+#page-content {
+    margin-top: 10vh;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logodoodle {
+    margin: 2vh 0;
+}
+
+#searchform {
+    padding: 20px;
+}
+
+#searchbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40vw;
+    min-width: 300px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 30px;
+    border-color: var(--footerboder);
+}
+
+#searchbar:hover {
+    box-shadow: 0 1px 3px 3px var(--footerbackgroundcolor);
+}
+
+#lupa {
+    height: 100%;
+    padding: 10px;
+}
+
+#texto {
+    height: 100%;
+    border: none;
+    width: 35vw;
+}
+
+#texto:focus {
+    outline: none;
+}
+
+#micro {
+    height: 100%;
+    padding: 10px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    margin-top: 10px;
+}
+
+#buttons input {
+    background-color: var(--formbuttonscolor);
+    border-style: none;
+    color: var(--defaultfontcolor);
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    margin: 0px 5px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: white;
+}
+
+#buttons input:hover {
+    border-style: solid;
+    border-color: var(--footerboder);
+    border-width: 1px;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--footerbackgroundcolor);
+    color: var(--footerfontcolor);
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+footer li {
+    padding: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--footerfontcolor);
+    display: block;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#country {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 15px 30px;
+}
+
+#lists {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px;
+    border-style: solid;
+    border-color: var(--footerboder);
+    flex-wrap: wrap;
+    padding: 0px 15px;
+}
+
+@media only screen and (max-width: 680px) {
+    #lists {
+        justify-content: space-evenly;
+    }
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#terms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
