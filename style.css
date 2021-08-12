@@ -174,18 +174,21 @@ body {
 
 .navbar-ul {
     display: flex;
+    margin: 0 10px;
 }
 
 .nav-item {
     height: 100%;
+    font-size: 0.9rem;
+    color: var(--formbuttonscolor);
 }
 
 .nav-item:hover {
     text-decoration: underline;
 }
 
-#circle:hover {
-    background-color: var(--footerbackgroundcolor);
+.nav-item>a>img {
+    border-radius: 50%;
 }
 
 #navbar a {
@@ -196,7 +199,11 @@ body {
 }
 
 #circle {
-    border-radius: 100%;
+    border-radius: 50%;
+}
+
+#circle:hover {
+    background-color: var(--footerbackgroundcolor);
 }
 
 #page-content {
